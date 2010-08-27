@@ -1,4 +1,20 @@
 <?php
+
+global $gBitSystem;
+
+$gBitSystem->registerPackageInfo( DIASALSA_PKG_NAME, array(
+	'description' => "Proxy interface to DIA Salsa's Actions tool",
+) );
+
+// Package Requirements
+$gBitSystem->registerRequirements( USERS_PKG_NAME, array(
+	'liberty'   => array( 'min' => '2.1.4' ),
+));
+
+// Install process
+global $gBitInstaller;
+if( is_object( $gBitInstaller ) ){
+
 $tables = array(
 
 'diasalsa_actions' => "
@@ -36,15 +52,9 @@ $tables = array(
 
 );
 
-global $gBitInstaller;
-
 foreach( array_keys( $tables ) AS $tableName ) {
 	$gBitInstaller->registerSchemaTable( DIASALSA_PKG_NAME, $tableName, $tables[$tableName] );
 }
-
-$gBitInstaller->registerPackageInfo( DIASALSA_PKG_NAME, array(
-	'description' => "Proxy interface to DIA Salsa's Actions tool",
-) );
 
 // ### Sequences
 $sequences = array (
@@ -65,9 +75,4 @@ $gBitInstaller->registerContentObjects( DIASALSA_PKG_NAME, array(
 	'SalsaAction'=>DIASALSA_PKG_PATH.'SalsaAction.php',
 ));
 
-// Package Requirements
-$gBitInstaller->registerRequirements( USERS_PKG_NAME, array(
-	'liberty'   => array( 'min' => '2.1.4' ),
-));
-
-
+}
