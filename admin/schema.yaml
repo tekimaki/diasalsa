@@ -55,3 +55,5 @@ diasalsa:
     p_actions_admin: 
       description: Can admin actions
       level: admin
+  contenttypes:
+    SalsaAction: SalsaAction.php
