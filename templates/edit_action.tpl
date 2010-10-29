@@ -286,7 +286,7 @@
 							{/forminput}
 						</div>
 					{/legend}
-						<div class="row submit">
+						<div class="buttonHolder row submit">
 							<input type="submit" name="cancel" value="{tr}Cancel{/tr}" />&nbsp;
 							<input type="submit" name="preview" value="{tr}Preview{/tr}" />&nbsp;
 							<input type="submit" name="store_action" value="{tr}Save{/tr}" />&nbsp;

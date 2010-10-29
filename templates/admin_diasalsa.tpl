@@ -32,8 +32,8 @@
 			{formhelp note='Please enter the password again'}
 		{/forminput}
 	</div>
-	<div class="row submit">
-	<div class="row submit">
+	<div class="buttonHolder row submit">
+	<div class="buttonHolder row submit">
 		<input type="submit" name="diasalsa_preferences" value="{tr}Change Preferences{/tr}" />
 	</div>
 {/form}

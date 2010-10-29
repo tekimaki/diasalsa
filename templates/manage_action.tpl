@@ -68,7 +68,7 @@
 							{/forminput}
 						</div>
 						{textarea name="email_body" label="Email Body"}{$action.summary}<p>{tr}Take Action by going to <a href="{$smarty.const.BIT_BASE_URI}{$action.display_url}">{$gBitSystem->getConfig('site_title')}{/tr}</a><br />{$smarty.const.BIT_BASE_URI}{$action.display_url}</p>{/textarea}
-						<div class="row submit">
+						<div class="buttonHolder row submit">
 							<input type="submit" name="send_email" value="{tr}Send{/tr}" />
 						</div>
 				{/form}

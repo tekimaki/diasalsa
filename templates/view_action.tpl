@@ -267,7 +267,7 @@
 					{/forminput}
 				</div>
 				{/legend}
-				<div class="row submit">
+				<div class="buttonHolder row submit">
 					<input type="submit" name="send_letter" value="{tr}Send My Letter{/tr}" />
 				</div>
 			{/if}
